@@ -75,7 +75,7 @@ export function CustomNavbar() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <a href="https://typs.dev" target="_blank">
-            <Button 
+            <Button
               className="font-minecraft bg-green-500 text-white text-xl tracking-wide hover:bg-green-400 rounded-none"
               placeholder=""
               onPointerEnterCapture={() => {}}
@@ -107,15 +107,15 @@ export function CustomNavbar() {
           isScrolling ? 'bg-black/40' : 'bg-black'
         }`}>
           <div className="mt-6 flex items-center gap-4">
-            <a href="https://www.materila-tailwind.com/blocks" target="_blank">
-              <Button 
-                color="white" 
+            <a href="https://typs.dev" target="_blank">
+              <Button
+                color="white"
                 className="font-minecraft bg-green-500 w-full rounded-none text-xl text-white hover:bg-gray-200"
                 placeholder=""
                 onPointerEnterCapture={() => {}}
                 onPointerLeaveCapture={() => {}}
               >
-                blocks
+                Join Us <span>↗</span>
               </Button>
             </a>
           </div>

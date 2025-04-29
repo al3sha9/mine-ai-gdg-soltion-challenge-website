@@ -24,7 +24,7 @@ const minecraft = localFont({
 export const metadata: Metadata = {
   title: "Mine-AI",
   description:
-    "Introducing Tailwind Event Landing Page, a dynamic and visually appealing landing page template designed using Tailwind CSS and Material Tailwind.",
+    "G for GDG",
 };
 
 export default function RootLayout({
