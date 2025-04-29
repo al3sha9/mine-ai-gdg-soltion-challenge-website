@@ -1,0 +1,50 @@
+import "./globals.css";
+import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+import { Layout } from "@/components";
+import localFont from 'next/font/local';
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
+  display: "swap",
+});
+
+const minecraft = localFont({
+  src: [
+    {
+      path: './Minecraft.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-minecraft',
+});
+
+export const metadata: Metadata = {
+  title: "Mine-AI",
+  description:
+    "Introducing Tailwind Event Landing Page, a dynamic and visually appealing landing page template designed using Tailwind CSS and Material Tailwind.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <head>
+        <script
+          defer
+          data-site="YOUR_DOMAIN_HERE"
+          src="https://api.nepcha.com/js/nepcha-analytics.js"
+        ></script>
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+      </head>
+      <body className={`${poppins.className} ${minecraft.variable}`}>
+        <Layout>{children}</Layout>
+      </body>
+    </html>
+  );
+}
