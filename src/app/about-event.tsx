@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Typography } from "@material-tailwind/react";
@@ -21,12 +22,16 @@ const EVENT_INFO = [
 export function AboutEvent() {
   return (
     <section className="container mx-auto flex flex-col items-center px-4 py-10">
-      <Typography variant="h6" className="text-center mb-2" color="orange">
+      {/* @ts-expect-error typing issue in material-tailwind */}
+      <Typography  variant="h6" className="text-center mb-2" color="orange">
         About the event
       </Typography>
-      <Typography variant="h3" className="text-center" color="blue-gray">
+            {/* @ts-expect-error typing issue in material-tailwind */}
+
+      <Typography  variant="h3" className="text-center" color="blue-gray">
         Why Attend?
       </Typography>
+            {/* @ts-expect-error typing issue in material-tailwind */}
       <Typography
         variant="lead"
         className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal !text-gray-500"

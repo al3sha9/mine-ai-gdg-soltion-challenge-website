@@ -35,11 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          defer
-          data-site="YOUR_DOMAIN_HERE"
-          src="https://api.nepcha.com/js/nepcha-analytics.js"
-        ></script>
+
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={`${poppins.className} ${minecraft.variable}`}>

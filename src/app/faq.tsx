@@ -34,9 +34,14 @@ export function Faq() {
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto">
         <div className="text-center">
+
+                      {/* @ts-expect-error typing issue in material-tailwind */}
+
           <Typography variant="h1" color="blue-gray" className="font-minecraft mb-4">
             Frequently asked questions
           </Typography>
+                      {/* @ts-expect-error typing issue in material-tailwind */}
+
           <Typography
             variant="lead"
             className="mx-auto mb-24 lg:w-3/5 !text-gray-500"
@@ -48,16 +53,30 @@ export function Faq() {
         </div>
 
         <div className="mx-auto lg:max-w-screen-lg lg:px-20">
+
           {FAQS.map(({ title, desc }, key) => (
+
             <Accordion
               key={key}
               open={open === key + 1}
               onClick={() => handleOpen(key + 1)}
+              animate={{ mount: { opacity: 1 }, unmount: { opacity: 0 } }}
+              className="my-2"
+              placeholder=""
+              onPointerEnterCapture={() => {}}
+              onPointerLeaveCapture={() => {}}
             >
-              <AccordionHeader className="text-left text-gray-900">
+              <AccordionHeader
+                className="text-left text-gray-900"
+                placeholder=""
+                onPointerEnterCapture={() => {}}
+                onPointerLeaveCapture={() => {}}
+              >
                 {title}
               </AccordionHeader>
               <AccordionBody>
+                            {/* @ts-expect-error typing issue in material-tailwind */}
+
                 <Typography
                   color="blue-gray"
                   className="font-normal text-gray-500"

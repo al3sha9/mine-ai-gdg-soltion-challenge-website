@@ -16,8 +16,9 @@ export function SponsoredBy() {
   return (
     <div className="bg-pixel w-full h-full">
     <section className="py-8 bg-white text-white px-8 lg:py-20">
-     
+
       <div className="container mx-auto text-center">
+                    {/* @ts-expect-error typing issue in material-tailwind */}
         <Typography variant="h6" color="black" className="mb-8">
           SPONSORED BY
         </Typography>
@@ -34,7 +35,7 @@ export function SponsoredBy() {
           ))}
         </div>
       </div>
-      
+
     </section>
     </div>
   );
