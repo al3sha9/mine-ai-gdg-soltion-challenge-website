@@ -26,8 +26,8 @@ export function Footer() {
             Don&apos;t miss out on this exclusive offer that will end soon.
           </Typography>
           <div className="flex w-full md:w-fit gap-3 mt-2 flex-col md:flex-row">
-            <Button 
-              color="white" 
+            <Button
+              color="white"
               size="md"
               className="bg-white text-black hover:bg-gray-200"
               placeholder=""
@@ -41,7 +41,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center !justify-between">
           <Typography
             as="a"
-            href="https://www.material-tailwind.com"
+            href="https://typs.dev/"
             target="_blank"
             variant="h6"
             className="text-white"
@@ -49,7 +49,7 @@ export function Footer() {
             onPointerEnterCapture={() => {}}
             onPointerLeaveCapture={() => {}}
           >
-            Material Tailwind
+            Mine-AI
           </Typography>
           <ul className="flex justify-center my-4 md:my-0 w-max mx-auto items-center gap-4">
             {LINKS.map((link, index) => (
@@ -69,9 +69,9 @@ export function Footer() {
             ))}
           </ul>
           <div className="flex w-fit justify-center gap-2">
-            <IconButton 
-              size="sm" 
-              color="white" 
+            <IconButton
+              size="sm"
+              color="white"
               variant="text"
               className="text-white hover:bg-white/10"
               placeholder=""
@@ -80,9 +80,9 @@ export function Footer() {
             >
               <i className="fa-brands fa-twitter text-lg" />
             </IconButton>
-            <IconButton 
-              size="sm" 
-              color="white" 
+            <IconButton
+              size="sm"
+              color="white"
               variant="text"
               className="text-white hover:bg-white/10"
               placeholder=""
@@ -91,9 +91,9 @@ export function Footer() {
             >
               <i className="fa-brands fa-youtube text-lg" />
             </IconButton>
-            <IconButton 
-              size="sm" 
-              color="white" 
+            <IconButton
+              size="sm"
+              color="white"
               variant="text"
               className="text-white hover:bg-white/10"
               placeholder=""
@@ -102,9 +102,9 @@ export function Footer() {
             >
               <i className="fa-brands fa-instagram text-lg" />
             </IconButton>
-            <IconButton 
-              size="sm" 
-              color="white" 
+            <IconButton
+              size="sm"
+              color="white"
               variant="text"
               className="text-white hover:bg-white/10"
               placeholder=""
