@@ -1,8 +1,9 @@
-
 "use client";
 
 import { Typography } from "@material-tailwind/react";
 import AboutCard from "@/components/about-card";
+import Image from "next/image";
+import Pic1 from "../../public/block.png";
 
 const EVENT_INFO = [
   {
@@ -23,15 +24,15 @@ export function AboutEvent() {
   return (
     <section className="container mx-auto flex flex-col items-center px-4 py-10">
       {/* @ts-expect-error typing issue in material-tailwind */}
-      <Typography  variant="h6" className="text-center mb-2" color="orange">
+      <Typography variant="h6" className="text-center mb-2" color="orange">
         About the event
       </Typography>
-            {/* @ts-expect-error typing issue in material-tailwind */}
+      {/* @ts-expect-error typing issue in material-tailwind */}
 
-      <Typography  variant="h3" className="text-center" color="blue-gray">
+      <Typography variant="h3" className="text-center" color="blue-gray">
         Why Attend?
       </Typography>
-            {/* @ts-expect-error typing issue in material-tailwind */}
+      {/* @ts-expect-error typing issue in material-tailwind */}
       <Typography
         variant="lead"
         className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal !text-gray-500"
@@ -45,7 +46,12 @@ export function AboutEvent() {
         {EVENT_INFO.map((props, idx) => (
           <AboutCard key={idx} {...props} />
         ))}
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 relative">
+          <Image
+            src={Pic1}
+            alt="banner-img-insta"
+            className="absolute md:w-[450px] 10 animate-[pulse_3s_ease-in-out_infinite] md:opacity-100 opacity-30 -z-[0]  transform -rotate-12 md:right-[25rem]"
+          />
           <AboutCard
             title="Networking!"
             subTitle="Community"

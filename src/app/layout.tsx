@@ -2,7 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Layout } from "@/components";
-import localFont from 'next/font/local';
+import localFont from "next/font/local";
+import "animate.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,18 +14,17 @@ const poppins = Poppins({
 const minecraft = localFont({
   src: [
     {
-      path: './Minecraft.ttf',
-      weight: '400',
-      style: 'normal',
+      path: "./Minecraft.ttf",
+      weight: "400",
+      style: "normal",
     },
   ],
-  variable: '--font-minecraft',
+  variable: "--font-minecraft",
 });
 
 export const metadata: Metadata = {
   title: "Mine-AI",
-  description:
-    "G for GDG",
+  description: "G for GDG",
 };
 
 export default function RootLayout({
@@ -35,7 +35,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={`${poppins.className} ${minecraft.variable}`}>

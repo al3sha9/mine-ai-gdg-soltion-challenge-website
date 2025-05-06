@@ -1,3 +1,4 @@
+"use client";
 // components
 import { CustomNavbar, Footer } from "@/components";
 
@@ -8,10 +9,11 @@ import AboutEvent from "./about-event";
 import OurStats from "./our-stats";
 import EventContent from "./event-content";
 import Faq from "./faq";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function Portfolio() {
   return (
-    <>
+    <ParallaxProvider>
       <CustomNavbar />
       <Hero />
       <SponsoredBy />
@@ -20,6 +22,6 @@ export default function Portfolio() {
       <EventContent />
       <Faq />
       <Footer />
-    </>
+    </ParallaxProvider>
   );
 }

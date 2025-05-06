@@ -2,9 +2,11 @@
 
 import { IconButton, Button, Typography } from "@material-tailwind/react";
 import { PlayIcon } from "@heroicons/react/24/solid";
+import { Parallax } from "react-scroll-parallax";
 
 function Hero() {
   return (
+    // <Parallax translateY={[-20, 20]}>
     <div className="relative min-h-screen w-full text-white bg-black">
       <video
         autoPlay
@@ -17,9 +19,9 @@ function Hero() {
       <div className="absolute inset-0 h-full w-full " />
       <div className="grid min-h-screen px-8">
         <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
-          <Typography 
-            variant="h3" 
-            color="white" 
+          <Typography
+            variant="h3"
+            color="white"
             className="mb-2"
             placeholder=""
             onPointerEnterCapture={() => {}}
@@ -27,9 +29,9 @@ function Hero() {
           >
             17 May | NIC ISLAMABAD
           </Typography>
-          <Typography 
-            variant="h1" 
-            color="white" 
+          <Typography
+            variant="h1"
+            color="white"
             className="lg:max-w-3xl font-minecraft"
             placeholder=""
             onPointerEnterCapture={() => {}}
@@ -47,10 +49,10 @@ function Hero() {
           >
             Join us for the most anticipated event of the year
           </Typography>
-          
         </div>
       </div>
     </div>
+    // </Parallax>
   );
 }
 

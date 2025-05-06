@@ -1,7 +1,12 @@
 "use client";
 
 import React from "react";
-import { Typography, Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/react";
+import {
+  Typography,
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
 
 const FAQS = [
   {
@@ -31,66 +36,69 @@ export function Faq() {
   const handleOpen = (value: number) => setOpen(open === value ? 0 : value);
 
   return (
-    <section className="py-8 px-8 lg:py-20">
-      <div className="container mx-auto">
-        <div className="text-center">
+    <section className="">
+      <div className="py-8  px-8 lg:py-20">
+        <div className="container bg-white shadow-xl py-8 mx-auto">
+          <div className="text-center">
+            {/* @ts-expect-error typing issue in material-tailwind */}
 
-                      {/* @ts-expect-error typing issue in material-tailwind */}
-
-          <Typography variant="h1" color="blue-gray" className="font-minecraft mb-4">
-            Frequently asked questions
-          </Typography>
-                      {/* @ts-expect-error typing issue in material-tailwind */}
-
-          <Typography
-            variant="lead"
-            className="mx-auto mb-24 lg:w-3/5 !text-gray-500"
-          >
-            Welcome to the Mine-AI 2025 FAQ section. We&apos;re here to
-            address your most common queries and provide you with the
-            information you need to make the most of your conference experience.
-          </Typography>
-        </div>
-
-        <div className="mx-auto lg:max-w-screen-lg lg:px-20">
-
-          {FAQS.map(({ title, desc }, key) => (
-
-            <Accordion
-              key={key}
-              open={open === key + 1}
-              onClick={() => handleOpen(key + 1)}
-              animate={{ mount: { opacity: 1 }, unmount: { opacity: 0 } }}
-              className="my-2"
-              placeholder=""
-              onPointerEnterCapture={() => {}}
-              onPointerLeaveCapture={() => {}}
+            <Typography
+              variant="h1"
+              color="blue-gray"
+              className="font-minecraft mb-4"
             >
-              <AccordionHeader
-                className="text-left text-gray-900"
+              Frequently asked questions
+            </Typography>
+            {/* @ts-expect-error typing issue in material-tailwind */}
+
+            <Typography
+              variant="lead"
+              className="mx-auto mb-24 lg:w-3/5 !text-gray-500"
+            >
+              Welcome to the Mine-AI 2025 FAQ section. We&apos;re here to
+              address your most common queries and provide you with the
+              information you need to make the most of your conference
+              experience.
+            </Typography>
+          </div>
+
+          <div className="mx-auto lg:max-w-screen-lg lg:px-20">
+            {FAQS.map(({ title, desc }, key) => (
+              <Accordion
+                key={key}
+                open={open === key + 1}
+                onClick={() => handleOpen(key + 1)}
+                animate={{ mount: { opacity: 1 }, unmount: { opacity: 0 } }}
+                className="my-2"
                 placeholder=""
                 onPointerEnterCapture={() => {}}
                 onPointerLeaveCapture={() => {}}
               >
-                {title}
-              </AccordionHeader>
-              <AccordionBody>
-                            {/* @ts-expect-error typing issue in material-tailwind */}
-
-                <Typography
-                  color="blue-gray"
-                  className="font-normal text-gray-500"
+                <AccordionHeader
+                  className="text-left text-gray-900"
+                  placeholder=""
+                  onPointerEnterCapture={() => {}}
+                  onPointerLeaveCapture={() => {}}
                 >
-                  {desc}
-                </Typography>
-              </AccordionBody>
-            </Accordion>
-          ))}
+                  {title}
+                </AccordionHeader>
+                <AccordionBody>
+                  {/* @ts-expect-error typing issue in material-tailwind */}
+
+                  <Typography
+                    color="blue-gray"
+                    className="font-normal text-gray-500"
+                  >
+                    {desc}
+                  </Typography>
+                </AccordionBody>
+              </Accordion>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
 
 export default Faq;
