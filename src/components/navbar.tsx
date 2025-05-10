@@ -74,7 +74,7 @@ export function CustomNavbar() {
         </Typography>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <a href="https://typs.dev" target="_blank">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdad9AP09SkWMTFKBnRFjvz2Y1kgI6G6czYdFAkY1uDrVtmbA/viewform" target="_blank">
             <Button
               className="font-minecraft bg-green-500 text-white text-xl tracking-wide hover:bg-green-400 rounded-none"
               placeholder=""
@@ -107,7 +107,7 @@ export function CustomNavbar() {
           isScrolling ? 'bg-black/40' : 'bg-black'
         }`}>
           <div className="mt-6 flex items-center gap-4">
-            <a href="https://typs.dev" target="_blank">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdad9AP09SkWMTFKBnRFjvz2Y1kgI6G6czYdFAkY1uDrVtmbA/viewform" target="_blank">
               <Button
                 color="white"
                 className="font-minecraft bg-green-500 w-full rounded-none text-xl text-white hover:bg-gray-200"
